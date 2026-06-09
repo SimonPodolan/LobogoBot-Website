@@ -17,7 +17,7 @@ export default function Promo() {
 
           <div className="promo" data-animate>
             <iframe
-              src="/promo/index.html"
+              src="promo/index.html"
               title="LoboGo demo"
               loading="lazy"
               allow="autoplay; fullscreen"
