@@ -1,0 +1,13 @@
+.DS_Store
+.env*.local
+.next/
+out/
+node_modules/
+.vercel/
+.idea/
+.playwright-cli/
+*.png
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
