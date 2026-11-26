@@ -4,7 +4,7 @@ const FEATS = [
   {
     icon: "target",
     t: "Choose your event",
-    d: "Add the Ticketmaster event link and choose how many tickets you want.",
+    d: "Add a Ticketmaster event link and choose how many tickets you want. Lobogo supports primary and resale tickets in the EU, US, UK, and FR.",
   },
   {
     icon: "bell",

@@ -3,11 +3,10 @@ import Footer from "@/components/Footer";
 
 const WHOP_URL = "https://whop.com/lobogobot/";
 
-function Screenshot({ src, alt, caption }) {
+function Screenshot({ src, alt }) {
   return (
     <figure className="guide-shot">
       <img src={src} alt={alt} loading="lazy" />
-      <figcaption>{caption}</figcaption>
     </figure>
   );
 }
@@ -32,7 +31,7 @@ export default function GuidePage() {
 
         <div className="container guide-content">
           <div className="guide-note">
-            <strong>Before you start:</strong> Lobogo can prepare a cart, but it does not pay for tickets. You open the checkout link and finish the purchase yourself on Ticketmaster. A cart or place in a queue does not guarantee tickets.
+            Lobogo supports primary and resale tickets in the EU, US, UK, and FR. It can send a checkout link to your private Discord channel; open it to review the order and finish payment on Ticketmaster.
           </div>
 
           <section className="guide-section" id="before-you-start">
@@ -60,6 +59,7 @@ export default function GuidePage() {
                 <li>When installation finishes, open <strong>Lobogo Agent</strong> from the Windows Start menu.</li>
               </ol>
               <p className="guide-small">Keep your PC connected to the internet during installation and first launch.</p>
+              <Screenshot src="/guide/windows-installer.png" alt="Lobogo Agent Windows installer welcome screen" />
             </div>
           </section>
 
@@ -75,10 +75,7 @@ export default function GuidePage() {
                 <li>Click Chrome’s puzzle-piece icon and pin Lobogo so it stays visible beside the address bar.</li>
               </ol>
               <div className="guide-note guide-note--small">Choose the extension folder shown in Lobogo Agent, not the folder above it.</div>
-              <div className="guide-shot-grid">
-                <Screenshot src="/guide/popup-tasks-v342.png" alt="Lobogo tasks shown in the Chrome extension" caption="The Lobogo extension in Chrome. This example screenshot is from version 3.4.2." />
-                <Screenshot src="/guide/dashboard-redacted-v342.png" alt="Lobogo task dashboard with profile details covered" caption="Task dashboard. Profile details have been covered. Example screenshot from version 3.4.2." />
-              </div>
+              <Screenshot src="/guide/chrome-extension.png" alt="Chrome Extensions page with Lobogo loaded and enabled" />
             </div>
           </section>
 
@@ -93,9 +90,7 @@ export default function GuidePage() {
                 <li>Add your private Discord webhook in <strong>Your Discord webhook</strong>. This is the link that lets Lobogo send messages to your channel. Ask your Discord admin for it if you do not have one.</li>
                 <li>Click <strong>Save settings</strong>. Use <strong>Test webhooks</strong> to check that Discord receives a test message.</li>
               </ol>
-              <p className="guide-small">For a basic setup, leave the other settings as they are.</p>
-              <p className="guide-small">Sign in to Ticketmaster in Chrome before starting. No proxy setup is needed for this version of Lobogo. If Ticketmaster asks for an email code, check the email account linked to your Ticketmaster account.</p>
-              <Screenshot src="/guide/settings-fields-redacted-v342.png" alt="Lobogo settings with private values covered" caption="Settings example. Private values are covered; screenshot from version 3.4.2." />
+              <p className="guide-small">Sign in to Ticketmaster in Chrome before starting. No proxy setup is needed. If Ticketmaster asks for an email code, check the email account linked to your Ticketmaster account.</p>
             </div>
           </section>
 
@@ -103,19 +98,29 @@ export default function GuidePage() {
             <div className="guide-section__number">05</div>
             <div className="guide-section__body">
               <h2>Create your first task</h2>
-              <p>A task is simply one event and the ticket preferences you want Lobogo to follow.</p>
-              <ol>
-                <li>Open <strong>Tasks</strong> and click <strong>Create task</strong>.</li>
-                <li>Paste the Ticketmaster event link into <strong>Event URL</strong>.</li>
-                <li>Choose how many tickets you want in <strong>Qty</strong>. A range such as <code>2-4</code> lets Lobogo try up to four tickets, then fewer if needed.</li>
-                <li>Set <strong>Max price</strong> if you have a limit. Use the event’s currency. Leave it empty if you do not want to set one.</li>
-                <li>Leave <strong>Auto-cart on match</strong> and <strong>Watch resale too</strong> turned on if you want Lobogo to prepare matching carts, including resale tickets where supported.</li>
-                <li>Click <strong>Add event</strong>. Then click the main <strong>Start</strong> button to begin monitoring.</li>
-              </ol>
+              <p>A task is one event plus the ticket details you want Lobogo to look for. Open <strong>Tasks</strong> → <strong>Create task</strong>, then fill in the fields:</p>
+              <div className="guide-table-wrap">
+                <table className="guide-table">
+                  <thead><tr><th>Field</th><th>What to enter</th><th>What it does</th></tr></thead>
+                  <tbody>
+                    <tr><td><strong>Event URL</strong></td><td>Paste the full Ticketmaster link for the event you want.</td><td>Tells Lobogo which event to watch. Make sure the link is for the right date and city.</td></tr>
+                    <tr><td><strong>Sale type</strong></td><td>Leave <strong>Standard sale</strong> for a regular sale. Choose <strong>Presale / fan-club</strong> only if you have that event’s valid code.</td><td>Selects the kind of sale. Presale details appear only after choosing the presale option.</td></tr>
+                    <tr><td><strong>Qty</strong></td><td>Enter one number, such as <code>2</code>, or a range, such as <code>2-4</code>.</td><td>For <code>2-4</code>, Lobogo tries for 4 tickets first, then 3, then 2.</td></tr>
+                    <tr><td><strong>Max price</strong></td><td>Enter your maximum price per ticket, using the event’s currency. Leave it empty if any price is okay.</td><td>Stops Lobogo choosing tickets above your budget. The hint <strong>any</strong> means there is no price limit.</td></tr>
+                    <tr><td><strong>Same max for any ticket</strong></td><td>Checked by default. Leave checked to use one price limit for every ticket type. Uncheck it for separate limits.</td><td>When unchecked, separate <strong>Floor / GA</strong> and <strong>Seated</strong> options appear.</td></tr>
+                    <tr><td><strong>Floor / GA</strong></td><td>Keep checked to include standing / general admission tickets. Enter a price limit in the box beside it.</td><td>Uncheck it if you do not want standing / general admission.</td></tr>
+                    <tr><td><strong>Seated</strong></td><td>Keep checked to include seated tickets. Enter a price limit in the box beside it.</td><td>Uncheck it if you do not want seated tickets.</td></tr>
+                    <tr><td><strong>Keywords</strong></td><td>Type words separated by spaces. Use <code>-</code> before a word to exclude it, for example <code>-obstructed</code>. Use <code>+</code> for a word you want, for example <code>+standing</code>.</td><td>Helps Lobogo include or skip ticket descriptions. Leave blank if you do not need keyword filters.</td></tr>
+                    <tr><td><strong>Auto-cart on match</strong></td><td>Checked by default. Leave checked for automatic cart attempts.</td><td>When an offer matches your choices, Lobogo tries to add it to a cart.</td></tr>
+                    <tr><td><strong>Watch resale too</strong></td><td>Checked by default. Leave checked to include resale listings alongside primary tickets. Turn it off if you only want primary tickets.</td><td>Controls whether Lobogo also looks for resale listings.</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <Screenshot src="/guide/task-edit.png" alt="Lobogo task form showing the event, price, ticket type, keyword and cart options" />
               <div className="guide-example">
-                <h3>Simple example</h3>
-                <p><strong>Event URL:</strong> your Ticketmaster event link · <strong>Qty:</strong> 2 · <strong>Max price:</strong> your budget · <strong>Auto-cart:</strong> on.</p>
-                <p className="guide-small">Double-check the event and your price limit before you start.</p>
+                <h3>Then start the task</h3>
+                <p>For a new task, click <strong>Add event</strong>. When editing an existing task, the button says <strong>Save event</strong>. Back on the Tasks page, click the main <strong>Start</strong> button to begin watching.</p>
+                <p className="guide-small">The market is picked from the Ticketmaster link; there is no separate market field. Check the event URL before saving.</p>
               </div>
             </div>
           </section>
@@ -129,8 +134,7 @@ export default function GuidePage() {
                 <li>If it can prepare a cart, it sends a checkout link to your Discord channel.</li>
                 <li>Open the link, review your order, and finish checkout and payment on Ticketmaster.</li>
               </ol>
-              <p>Ticketmaster may place you in a waiting room. Waiting time varies, and a queue or cart cannot guarantee tickets.</p>
-              <Screenshot src="/guide/carts-empty-v342.png" alt="Lobogo carts page before a cart has been created" caption="The Carts page shows cart results. This example is empty and from version 3.4.2." />
+              <p>Ticketmaster may place you in a waiting room. Keep Lobogo Agent and Chrome open while your task is running.</p>
             </div>
           </section>
 

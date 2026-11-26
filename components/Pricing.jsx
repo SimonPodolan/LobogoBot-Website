@@ -27,6 +27,7 @@ export default function Pricing() {
             <div className="plan__feats">
               <div><Icon name="check" size={16} stroke={2.6} /><span>Lobogo Agent for Windows and Chrome extension</span></div>
               <div><Icon name="check" size={16} stroke={2.6} /><span>Choose an event, ticket quantity, and budget</span></div>
+              <div><Icon name="check" size={16} stroke={2.6} /><span>EU, US, UK, and FR markets · primary and resale tickets</span></div>
               <div><Icon name="check" size={16} stroke={2.6} /><span>Cart links sent to your private Discord channel</span></div>
               <div><Icon name="check" size={16} stroke={2.6} /><span>No proxy setup required</span></div>
               <div><Icon name="check" size={16} stroke={2.6} /><span>You review the order and pay on Ticketmaster</span></div>

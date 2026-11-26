@@ -22,9 +22,6 @@ export default function Promo() {
             </article>
           ))}
         </div>
-        <p className="flow-footnote" data-animate>
-          Ticket availability and queue times are controlled by Ticketmaster. A cart does not guarantee a ticket; you complete checkout and payment yourself.
-        </p>
       </div>
     </section>
   );

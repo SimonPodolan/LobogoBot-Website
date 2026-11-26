@@ -694,3 +694,8 @@ a { color: inherit; text-decoration: none; }
   .live-dot::after, .tbar__fill::after, .feature::before { animation: none !important; }
   * { scroll-behavior: auto !important; }
 }
+
+/* ── final layout refinements ──────────────────────────── */
+.pricing { grid-template-columns: minmax(0, 620px); justify-content: center; }
+.plan--featured { transform: none; }
+.guide-back { display: block; width: max-content; }
