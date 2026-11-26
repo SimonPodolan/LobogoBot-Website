@@ -4,8 +4,8 @@ import MagneticButton from "./MagneticButton";
 const WHOP_URL = "https://whop.com/lobogobot/";
 
 const NOTES = [
-  "One machine per licence",
-  "Checkout and payment are completed by the user",
+  "No proxy setup required",
+  "You complete payment on Ticketmaster",
 ];
 
 export default function Footer() {
@@ -15,22 +15,21 @@ export default function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <Logo />
-            <h2>Access starts on Whop.</h2>
+            <h2>Ready to get started?</h2>
             <p>
-              The tester guide explains how to install the Windows app, load the
-              Chrome extension, and configure a task.
+              Follow the simple setup guide, choose an event, and let Lobogo help prepare your cart.
             </p>
           </div>
           <div className="footer__action">
             <MagneticButton href={WHOP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
               Request access
             </MagneticButton>
-            <a className="btn btn--ghost" href="/guide">Read the tester guide (SK)</a>
+            <a className="btn btn--ghost" href="/guide">Read the setup guide</a>
           </div>
         </div>
 
         <div className="footer__base">
-          <span>© 2026 LoboGo</span>
+          <span>© 2026 Lobogo</span>
           <div className="footer__legal" aria-label="Product notes">
             {NOTES.map((item) => (
               <span key={item}>{item}</span>

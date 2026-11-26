@@ -436,7 +436,7 @@ a { color: inherit; text-decoration: none; }
 .plan--featured { transform: none; }
 .plan__price--monthly { margin-top: 0; }
 
-/* ── Slovak end-user guide ──────────────────────────────── */
+/* ── simple end-user guide ──────────────────────────────── */
 .guide-page { padding: 122px 0 100px; }
 .guide-hero { max-width: 940px; padding-bottom: 48px; }
 .guide-back { display: inline-block; margin-bottom: 34px; color: var(--ink-2); font-size: 14px; font-weight: 600; }

@@ -1,19 +1,7 @@
-const FLOW = [
-  {
-    n: "01",
-    title: "Monitor zaznamená zmenu",
-    text: "Server sleduje dostupnosť lístkov na podporovaných stránkach Ticketmaster a zmenu odošle ďalej.",
-  },
-  {
-    n: "02",
-    title: "Extension vyhodnotí task",
-    text: "Chrome extension porovná udalosť s tvojou úlohou a jej filtrami. Pri podporovanej čakárni sa pokúsi prejsť dostupným queue flow.",
-  },
-  {
-    n: "03",
-    title: "Človek dokončí nákup",
-    text: "Ak sa podarí vytvoriť košík, odkaz príde na tvoj vlastný Discord webhook. Platbu vždy potvrdíš ty na Ticketmasteri.",
-  },
+const STEPS = [
+  { n: "01", title: "Pick an event", text: "Paste a Ticketmaster event link and choose your ticket quantity and budget." },
+  { n: "02", title: "Let Lobogo watch", text: "Keep Lobogo Agent and Chrome open. Lobogo looks for tickets that fit your task." },
+  { n: "03", title: "Complete your purchase", text: "If a cart is ready, Lobogo sends a private Discord link. You review the order and pay on Ticketmaster." },
 ];
 
 export default function Promo() {
@@ -21,16 +9,12 @@ export default function Promo() {
     <section id="how" className="section how-section">
       <div className="container">
         <div className="section__head center">
-          <span className="eyebrow" data-animate style={{ justifyContent: "center" }}>
-            Ako to funguje
-          </span>
-          <h2 data-animate>Od signálu k ručne dokončenej platbe.</h2>
-          <p data-animate>
-            Lobogo pripraví košík v podporovanom Ticketmaster flow. Dostupnosť, miesto v rade ani úspešný nákup nie sú zaručené.
-          </p>
+          <span className="eyebrow" data-animate style={{ justifyContent: "center" }}>How it works</span>
+          <h2 data-animate>Three simple steps.</h2>
+          <p data-animate>No technical setup or proxy is needed. Just choose an event and keep your app running.</p>
         </div>
         <div className="flow-grid">
-          {FLOW.map((step) => (
+          {STEPS.map((step) => (
             <article className="flow-card" data-animate key={step.n}>
               <span className="flow-card__number">{step.n}</span>
               <h3>{step.title}</h3>
@@ -38,10 +22,9 @@ export default function Promo() {
             </article>
           ))}
         </div>
-        <div className="flow-footnote" data-animate>
-          <strong>Tri časti:</strong> monitor dostupnosti → Lobogo Agent vo Windowse → Chrome extension.
-          Agent spája lokálnu extension so službou, pomáha s podporovanými OTP kódmi a spravuje aktualizácie.
-        </div>
+        <p className="flow-footnote" data-animate>
+          Ticket availability and queue times are controlled by Ticketmaster. A cart does not guarantee a ticket; you complete checkout and payment yourself.
+        </p>
       </div>
     </section>
   );

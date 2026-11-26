@@ -10,11 +10,11 @@ export default function Cta() {
         <div className="cta__card" data-animate>
           <div className="cta__inner">
             <h2>
-              Set up for the next drop.
+              Be ready for the next drop.
               <br />
-              Start with the official guide.
+              Start with the simple setup guide.
             </h2>
-            <p>Configure your event criteria, then let Lobogo prepare a cart when a supported offer matches.</p>
+            <p>Choose an event and a budget. Lobogo can prepare a cart and send you a private Discord link.</p>
             <MagneticButton href={WHOP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg" style={{ fontSize: 17 }}>
               Request access <Icon name="arrow" size={18} stroke={2.2} />
             </MagneticButton>

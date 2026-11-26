@@ -11,7 +11,7 @@ const LINKS = [
   ["How it works", "/#how"],
   ["Features", "/#features"],
   ["Pricing", "/#pricing"],
-  ["Návod (SK)", "/guide"],
+  ["Setup guide", "/guide"],
 ];
 
 export default function Nav() {

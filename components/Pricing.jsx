@@ -9,14 +9,14 @@ export default function Pricing() {
       <div className="container">
         <div className="section__head center">
           <span className="eyebrow" data-animate style={{ justifyContent: "center" }}>
-            One plan
+            One simple plan
           </span>
           <h2 data-animate>One Lobogo plan.</h2>
-          <p data-animate>Request access through the Lobogo product page on Whop.</p>
+          <p data-animate>Request access on Whop to get started.</p>
         </div>
         <div className="pricing">
           <div className="plan plan--featured" data-animate>
-            <span className="plan__tag">Single tier</span>
+            <span className="plan__tag">One plan</span>
             <div className="plan__name">Lobogo</div>
             <div className="plan__price"><b>$1,000</b><span>initial fee</span></div>
             <div className="plan__price plan__price--monthly"><b>$200</b><span>per month</span></div>
@@ -25,11 +25,11 @@ export default function Pricing() {
               Request access <Icon name="arrow" size={18} stroke={2.2} />
             </MagneticButton>
             <div className="plan__feats">
-              <div><Icon name="check" size={16} stroke={2.6} /><span>Windows Lobogo Agent with bundled Python</span></div>
-              <div><Icon name="check" size={16} stroke={2.6} /><span>Chrome extension for supported Ticketmaster markets</span></div>
-              <div><Icon name="check" size={16} stroke={2.6} /><span>Configurable task filters and supported queue flows</span></div>
-              <div><Icon name="check" size={16} stroke={2.6} /><span>Checkout link delivered to your own Discord webhook</span></div>
-              <div><Icon name="check" size={16} stroke={2.6} /><span>You complete the checkout and payment yourself</span></div>
+              <div><Icon name="check" size={16} stroke={2.6} /><span>Lobogo Agent for Windows and Chrome extension</span></div>
+              <div><Icon name="check" size={16} stroke={2.6} /><span>Choose an event, ticket quantity, and budget</span></div>
+              <div><Icon name="check" size={16} stroke={2.6} /><span>Cart links sent to your private Discord channel</span></div>
+              <div><Icon name="check" size={16} stroke={2.6} /><span>No proxy setup required</span></div>
+              <div><Icon name="check" size={16} stroke={2.6} /><span>You review the order and pay on Ticketmaster</span></div>
             </div>
           </div>
         </div>

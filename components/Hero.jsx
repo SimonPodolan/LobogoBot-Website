@@ -69,9 +69,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className="hero__sub hero__fade">
-            Lobogo combines a Ticketmaster availability monitor, a Windows agent,
-            and a Chrome extension. Set your ticket criteria, receive a cart link
-            in your private Discord channel, and complete checkout yourself.
+            Choose a Ticketmaster event and set your budget. Lobogo looks for
+            matching tickets, prepares a cart, and sends you a link in Discord.
+            You review and pay on Ticketmaster. No proxy setup required.
           </p>
           <div className="hero__cta hero__fade">
             <MagneticButton href={WHOP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
@@ -83,10 +83,10 @@ export default function Hero() {
           </div>
           <div className="hero__trust hero__fade">
             <span>
-              <Icon name="target" size={16} style={{ color: "var(--accent)" }} /> Event and ticket filters
+              <Icon name="target" size={16} style={{ color: "var(--accent)" }} /> Choose an event and budget
             </span>
             <span>
-              <Icon name="clock" size={16} style={{ color: "var(--accent)" }} /> Supported queue flows
+              <Icon name="clock" size={16} style={{ color: "var(--accent)" }} /> No proxy setup
             </span>
             <span>
               <Icon name="bell" size={16} style={{ color: "var(--accent)" }} /> Checkout link to Discord
