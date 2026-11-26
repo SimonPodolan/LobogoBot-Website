@@ -1,7 +1,7 @@
 # LoboGo — landing site (Next.js + GSAP)
 
 Awwwards-style marketing site. Light editorial aesthetic, green accent, Clash
-Display + General Sans (Fontshare), Lenis smooth scroll, GSAP ScrollTrigger
+Display + General Sans (Fontshare), native browser scrolling, GSAP ScrollTrigger
 reveals, magnetic CTAs, parallax hero, animated counters.
 
 ## Run
@@ -23,11 +23,11 @@ npm run build && npm start
 
 ```
 app/
-  layout.jsx     fonts, metadata, SmoothScroll provider, grain overlay
+  layout.jsx     fonts, metadata, scroll effects, grain overlay
   page.jsx       composes the sections
   globals.css    design tokens + all component styles
 components/
-  SmoothScroll   Lenis + GSAP ScrollTrigger setup + global [data-animate] reveal
+  ScrollEffects  GSAP ScrollTrigger setup + global [data-animate] reveal
   Icon           inline icon set + Logo (crosshair mark kept from original)
   Nav            sticky, turns solid on scroll, magnetic CTA
   Hero           GSAP line-mask headline reveal + parallax media
@@ -44,7 +44,7 @@ components/
 - Headline rises out of `overflow:hidden` masks (line reveal).
 - `:active` scale on buttons; magnetic hover gated to fine-pointer devices.
 - Marquee is `linear` (constant motion); everything else `ease-out`.
-- Full `prefers-reduced-motion` fallback (no transforms, no smooth scroll).
+- Full `prefers-reduced-motion` fallback (no transforms).
 
 ## Customising
 

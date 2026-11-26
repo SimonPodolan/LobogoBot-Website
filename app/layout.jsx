@@ -1,5 +1,5 @@
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
+import ScrollEffects from "@/components/ScrollEffects";
 
 export const metadata = {
   title: "Lobogo — Ticketmaster ticket helper",
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
             __html: "document.documentElement.classList.add('js')",
           }}
         />
-        <SmoothScroll>{children}</SmoothScroll>
+        <ScrollEffects>{children}</ScrollEffects>
         <div className="grain" aria-hidden />
       </body>
     </html>

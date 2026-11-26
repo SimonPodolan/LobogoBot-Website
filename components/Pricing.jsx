@@ -18,9 +18,8 @@ export default function Pricing() {
           <div className="plan plan--featured" data-animate>
             <span className="plan__tag">One plan</span>
             <div className="plan__name">Lobogo</div>
-            <div className="plan__price"><b>$1,000</b><span>initial fee</span></div>
-            <div className="plan__price plan__price--monthly"><b>$200</b><span>per month</span></div>
-            <p className="plan__desc">Prices exclude VAT.</p>
+            <div className="plan__price"><b>TBA</b></div>
+            <p className="plan__desc">Pricing to be announced.</p>
             <MagneticButton href={WHOP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
               Request access <Icon name="arrow" size={18} stroke={2.2} />
             </MagneticButton>
