@@ -68,11 +68,6 @@ export default function Hero() {
               <span className="hero__word accent">drop.</span>
             </span>
           </h1>
-          <p className="hero__sub hero__fade">
-            Choose a Ticketmaster event and set your budget. Lobogo looks for
-            matching tickets, prepares a cart, and sends you a link in Discord.
-            You review and pay on Ticketmaster. No proxy setup required.
-          </p>
           <div className="hero__cta hero__fade">
             <MagneticButton href={WHOP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
               Request access <Icon name="arrow" size={18} stroke={2.2} />
