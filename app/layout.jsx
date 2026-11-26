@@ -2,16 +2,16 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata = {
-  title: "LoboGo — Never miss the drop",
+  title: "Lobogo — Ticketmaster availability monitoring",
   description:
-    "Real-time Ticketmaster monitoring that reserves your tickets the instant they go live. Across every region.",
-  metadataBase: new URL("https://lobogo.app"),
+    "Ticketmaster availability monitoring with a Windows agent and Chrome extension. The user completes checkout and payment.",
+  metadataBase: new URL("https://lobogo-bot.vercel.app"),
   icons: {
     icon: "favicon.svg",
   },
   openGraph: {
-    title: "LoboGo — Never miss the drop",
-    description: "Real-time ticket monitoring & instant reserve.",
+    title: "Lobogo — Ticketmaster availability monitoring",
+    description: "A Windows agent and Chrome extension for supported Ticketmaster task flows.",
     type: "website",
   },
 };

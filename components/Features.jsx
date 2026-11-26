@@ -2,34 +2,34 @@ import Icon from "./Icon";
 
 const FEATS = [
 	{
-		icon: "bolt",
-		t: "Sub-second reserve",
-		d: "Detection-to-reserve in under a fifth of a second on supported sites.",
+		icon: "target",
+		t: "Task rules you control",
+		d: "Choose an event, ticket quantity, maximum price, ticket type, and keywords for each task.",
 	},
 	{
 		icon: "bell",
-		t: "Multi-channel alerts",
-		d: "Push, SMS, email and Telegram — pick how loud you want to be woken up.",
-	},
-	{
-		icon: "radar",
-		t: "Silent-restock catcher",
-		d: "Catches dropped holds and quiet restocks that never hit the homepage.",
-	},
-	{
-		icon: "target",
-		t: "Precise targeting",
-		d: "Lock onto a specific event, section or price ceiling.",
-	},
-	{
-		icon: "shield",
-		t: "Stealth sessions",
-		d: "Rotating, human-like sessions keep your account looking like you.",
+		t: "Private Discord cart alerts",
+		d: "Send the checkout link to a webhook in your own Discord channel. Payment stays in your hands.",
 	},
 	{
 		icon: "clock",
-		t: "Queue auto-pilot",
-		d: "Holds your place in line and fills checkout the moment it's your turn.",
+		t: "Queue support",
+		d: "The extension handles supported waiting-room flows. A queue can still take time and does not guarantee a ticket.",
+	},
+	{
+		icon: "globe",
+		t: "Supported Ticketmaster markets",
+		d: "The market is detected from the Ticketmaster event link. The exact supported domains depend on the current build.",
+	},
+	{
+		icon: "shield",
+		t: "Local OTP helper",
+		d: "When a supported Ticketmaster flow asks for an email code, the Windows agent can read a fresh code from your IMAP mailbox.",
+	},
+	{
+		icon: "radar",
+		t: "Separate automatic updates",
+		d: "The agent runtime and Chrome extension update separately. Chrome needs one manual Reload after an extension update.",
 	},
 ];
 
@@ -42,14 +42,14 @@ export default function Features() {
 			<div className="container">
 				<div className="section__head">
 					<span className="eyebrow" data-animate>
-						Features
+						What Lobogo does
 					</span>
 					<h2 data-animate>
-						Everything you need to win the drop.
+						From availability signal to a human checkout.
 					</h2>
 					<p data-animate>
-						Built for people who are tired of losing tickets to bots — so we built
-						you a faster one.
+						Lobogo automates monitoring and cart preparation on supported flows.
+						It does not complete the payment for you.
 					</p>
 				</div>
 				<div className="features">

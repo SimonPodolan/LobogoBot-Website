@@ -7,7 +7,7 @@ import Icon from "./Icon";
 import LiveFeed from "./LiveFeed";
 import MagneticButton from "./MagneticButton";
 
-const DISCORD_URL = "https://discord.gg/PYyWZ2RdDN";
+const WHOP_URL = "https://whop.com/lobogobot/";
 
 export default function Hero() {
   const root = useRef(null);
@@ -61,35 +61,35 @@ export default function Hero() {
         <div>
           <h1 className="hero__title">
             <span className="hero__line">
-              <span className="hero__word">Never</span>{" "}
-              <span className="hero__word">miss</span>
+              <span className="hero__word">Watch</span>{" "}
+              <span className="hero__word">the</span>
             </span>
             <span className="hero__line">
-              <span className="hero__word">the</span>{" "}
               <span className="hero__word accent">drop.</span>
             </span>
           </h1>
           <p className="hero__sub hero__fade">
-            LoboGo watches Ticketmaster in real time and reserves your tickets the
-            instant they go live.
+            Lobogo combines a Ticketmaster availability monitor, a Windows agent,
+            and a Chrome extension. Set your ticket criteria, receive a cart link
+            in your private Discord channel, and complete checkout yourself.
           </p>
           <div className="hero__cta hero__fade">
-            <MagneticButton href={DISCORD_URL} className="btn btn--primary btn--lg">
+            <MagneticButton href={WHOP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
               Request access <Icon name="arrow" size={18} stroke={2.2} />
             </MagneticButton>
             <a className="btn btn--ghost btn--lg" href="#how">
-              <Icon name="play" size={16} /> See how it works
+              <Icon name="play" size={16} /> How it works
             </a>
           </div>
           <div className="hero__trust hero__fade">
             <span>
-              <Icon name="bolt" size={16} style={{ color: "var(--accent)" }} /> 0.2s avg detection
+              <Icon name="target" size={16} style={{ color: "var(--accent)" }} /> Event and ticket filters
             </span>
             <span>
-              <Icon name="target" size={16} style={{ color: "var(--accent)" }} /> Auto reserve
+              <Icon name="clock" size={16} style={{ color: "var(--accent)" }} /> Supported queue flows
             </span>
             <span>
-              <Icon name="bell" size={16} style={{ color: "var(--accent)" }} /> Instant alerts
+              <Icon name="bell" size={16} style={{ color: "var(--accent)" }} /> Checkout link to Discord
             </span>
           </div>
         </div>

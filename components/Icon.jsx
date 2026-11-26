@@ -66,12 +66,12 @@ export default function Icon({ name, size = 20, stroke = 1.7, style, className }
 
 export function Logo() {
   return (
-    <a href="#top" className="logo" aria-label="LoboGo home">
+    <a href="/" className="logo" aria-label="Lobogo home">
       <span className="logo__mark">
         <Icon name="crosshair" size={20} stroke={2} />
       </span>
       <span className="logo__text">
-        Lobo<b>Go</b>
+        Lobogo
       </span>
     </a>
   );

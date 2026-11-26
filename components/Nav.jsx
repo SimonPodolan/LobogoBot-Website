@@ -5,12 +5,13 @@ import { gsap } from "gsap";
 import { Logo } from "./Icon";
 import MagneticButton from "./MagneticButton";
 
-const DISCORD_URL = "https://discord.gg/PYyWZ2RdDN";
+const WHOP_URL = "https://whop.com/lobogobot/";
 
 const LINKS = [
-  ["How it works", "#how"],
-  ["Features", "#features"],
-  ["Pricing", "#pricing"],
+  ["How it works", "/#how"],
+  ["Features", "/#features"],
+  ["Pricing", "/#pricing"],
+  ["Návod (SK)", "/guide"],
 ];
 
 export default function Nav() {
@@ -66,7 +67,7 @@ export default function Nav() {
               </a>
             ))}
           </nav>
-          <MagneticButton href={DISCORD_URL} className="btn btn--primary lnav__cta">
+          <MagneticButton href={WHOP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary lnav__cta">
             Request access
           </MagneticButton>
         </div>
@@ -77,7 +78,7 @@ export default function Nav() {
               <path d="M4 7h16M4 12h16M4 17h16" />
             </svg>
           </button>
-          <MagneticButton href={DISCORD_URL} className="btn btn--primary lnav__floatcta">
+          <MagneticButton href={WHOP_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary lnav__floatcta">
             Request access
           </MagneticButton>
         </div>
